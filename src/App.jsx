@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails";
 
 import Navbar from "./components/NavBar";
+import Hero from "./components/Hero";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       <Navbar cartCount={cartCount} />
-
+      <Hero />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
