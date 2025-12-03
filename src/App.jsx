@@ -5,6 +5,7 @@ import ProductDetails from "./pages/ProductDetails";
 
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
@@ -32,6 +33,7 @@ function App() {
           element={<ProductDetails products={products} addToCart={addToCart} />}
         />
       </Routes>
+      <Footer/>
     </>
   );
 }

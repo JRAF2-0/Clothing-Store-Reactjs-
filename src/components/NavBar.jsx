@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Navbar({ cartCount }) {
   return (
     <nav className="bg-black text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">My Clothing Store</h1>
+      <h1 className="text-xl font-bold">JRAF's Clothing Store</h1>
 
       <div className="flex items-center gap-4">
 
