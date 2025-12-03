@@ -1,8 +1,12 @@
+// ...existing code...
 import { useState } from "react";
-import ProductCard from "./components/ProductCard";
-import products from "./data/products";
-import NavBar from "./components/NavBar";
+import { Routes, Route } from "react-router-dom";
 
+import Navbar from "./components/NavBar";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import products from "./data/products"; 
 function App() {
   const [cartCount, setCartCount] = useState(0);
 
@@ -12,12 +16,16 @@ function App() {
 
   return (
     <>
-      <NavBar cartCount = {cartCount} />
-      <div className="flex flex-wrap justify-center mt-6">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} addToCart={addToCart} />
-        ))}
-      </div>
+      <Navbar cartCount={cartCount} />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/shop"
+          element={<Shop products={products} addToCart={addToCart} />}
+        />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </>
   );
 }
